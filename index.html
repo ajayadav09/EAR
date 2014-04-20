@@ -1,0 +1,570 @@
+    <!DOCTYPE html>
+    <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+    <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+    <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+    <!--[if gt IE 8]><!--> <html class="no-js" > <!--<![endif]-->
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <title></title>
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+            <link rel="stylesheet" href="css/bootstrap.css">
+            <style>
+            body {
+                    padding-top: 00px;
+                    padding-bottom: 20px;
+                }
+            </style>
+            <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+            <link rel="stylesheet" href="css/main.css">
+            <link rel="stylesheet" href="css/modal.css">
+
+            <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        </head>
+
+    <body data-spy="scroll" data-target=".scrollbtn" >
+            <!--[if lt IE 7]>
+                <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+            <![endif]-->
+
+        <div class="landingpage">
+            <div class="container" id="section-7" >
+                <img src="img/EAR%20Logo%20Green-01.png" class="greenicon"/>
+                <a href="#tabs" >  <div class="scrollbtn" id="scrollbtn" > </div>  </a>
+            </div>
+        </div>
+
+
+
+
+    <!--    <nav class="navbar navbar-default " id="navbar" role="navigation">
+            <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+               <div class="navbar-collapse collapse">
+                       <ul class="nav navbar-nav" >
+                            <li><a href="#section-7" class="Home-tab" onclick= equalsplit();><span>Home</span></a></li>
+                            <li><a href="#section-2" class="about-tab" onclick= aboutsplit();><span>About</span></a></li>
+                            <li><a href="#" class="hiw-tab"><span>How it works</span></a></li>
+                            <li><a href="#" class="wr-tab"><span>Why recycle </span></a></li>
+                            <li><a href="#" class="contacts-tab"><span>Contacts</span></a></li>
+                        </ul>
+                </div><!--/.navbar-collapse -->
+    <!--          </div> <!-- /navbar header -->
+    <!--        </div> <!-- container -->
+    <!--      </nav>      <!-- navbar-->   
+
+
+        <div id="tabs" class="tabs">
+
+            <div class="brandlabel" id="brandlabel"></div> 
+
+                    <nav>
+                        <ul>
+                            <li><a href="#section-1" class="icon-shop" onclick="equalsplit();"><span>Home</span></a></li>
+                            <li><a href="#section-2" class="icon-shop" onclick="sect2split();"><span>About</span></a></li>
+                            <li><a href="#section-3" class="icon-shop"><span>How it works</span></a></li>
+                            <li><a href="#section-4" class="icon-shop"><span>Why recycle</span></a></li>
+                            <li><a href="#section-5" class="icon-shop"><span>FAQ's</span></a></li>
+                            <li><a href="#section-6" class="icon-shop"><span>Contact</span></a></li>
+                        </ul>
+                    </nav>
+
+
+
+
+
+
+    <div class="content">
+
+
+
+            <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-head">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h1 class="modal-title" id="myModalLabel">SORRY</h1>
+          </div>
+          <div class="modal-body">
+            <p style="text-align:center">Could not find the part you were looking for</p>
+          </div>
+          <div class="modal-foot">
+           <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
+         <button type="button" class="btn btn-primary" id="regbutton" data-dismiss="modal" data-target="#cbp-mc-formreg" onclick="showpart();">REGISTER YOUR REQUEST HERE</button> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        <!-- Modal ends -->    
+
+
+            <!-- modal for selling pane -->
+    <div class="modal fade" id="myModalsell" tabindex="-1" role="dialog" aria-labelledby="myModalLabelsell" aria-hidden="true">
+        <div class="modal-dialog" id="modal-dialogsell">
+              <div class="modal-content" id="modal-contentsell">
+               <div class="modal-head" id="modalheadsell">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                       <h1 class="modal-title" id="myModalLabelsell">THANK YOU</h1>
+               </div>
+               <div class="modal-body" id="modal-bodysell">
+                  <p style="text-align:center">Based on the information you've provided, we'll get in touch with you with the best deal. </p>
+               </div>
+          <div class="modal-foot" id="modal-footsell">
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- modal ends -->    
+    
+    <!------------Modal for part Information---------- --> 
+         <div class="modal fade" id="myModalreg"  tabindex="-1"  role="dialog" aria-labelledby="myModalLabelreg" aria-hidden="true" >
+             <div class="modal-dialog" id="modal-dialogreg">
+              <div class="modal-content" id="modal-contentreg">
+               <div class="modal-head" id="modalheadreg">
+                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                       <h1 class="modal-title" id="myModalLabelpart">THANK YOU</h1>
+                </div>
+                <div class="modal-body" id="modal-bodyreg">
+            <p style="text-align:center">Your request has been submitted to many recyclers who may or may not reply to your request. The request remains in our system for 48 hours, if you do not receive a reply, you may resubmit your request, search in a wider geographical area, or assume that no one has that part.</p>
+          </div>
+          <div class="modal-foot" id="modal-footreg">
+           </div>
+        </div>
+      </div>
+    </div>   
+    <!--  -----Ends Modal for part Information------- --> 
+
+
+
+
+
+     <section  id="section-1" style="width:100%; height:768px; overflow:hidden;">	
+
+              <div class="container"  style="overflow:hidden;">
+
+                            <div id="split">
+
+                                <div id="searchpane">
+
+                                    <form class="cbp-mc-form" id="cbp-mc-form">
+                                               <div class="cbp-mc-column">
+                                                   <h1> SEARCH PART</h1>
+                                                   <h6 id="vim">VIM lookup<h6>
+                                             <label for="year" id="lblyear">Year</label>
+                                             <input type="date" id="year" name="year"></br>
+                                             <label for="model" id="lblmodel">Model</label>
+                                             <select id="model" name="model">
+                                                   <option>BWF54</option>
+                                                   <option>AUPR7</option>
+                                                   <option>MAR7T</option>
+                                                   <option>HON5A</option>
+                                          </select></br>
+
+                                            <label for="area" id="lblarea">Area</label>
+                                             <select id="area" name="area">
+                                                   <option>New Delhi</option>
+                                                   <option>London</option>
+                                                   <option>New York</option>
+                                                   <option>Paris</option>
+                                          </select>   </br>
+
+
+                                                  <label for="sort" id="lblsort">Sort By</label>
+                                          <select id="sort" name="sort">
+                                                   <option>Model Number</option>
+                                                   <option>Area</option>
+                                                   <option>Year</option>
+
+                                          </select></br>
+
+                                           <label for="postalcode" id="lblpostal">Postal Code</label>        
+                                             <input type="text" id="postalcode" name="postalcode">
+
+
+                                           <a href="#myModal"><input type="submit" id="search" name="search" value="Search" data-toggle="modal" 
+                                                                     data-target="#myModal"></a>
+
+                                             </div>
+
+                                            </form>
+
+            <!-- ===================================== Registration form for car ======================================================== -->
+
+                                          <form class="cbp-mc-formreg" id="cbp-mc-formreg">
+                                             <h3>Part Information<span> Car Model-XXX </span>          <span> Part-XXXX </span></h3>
+
+                                            <div class="cbp-mc-columnreg" id="top-left">
+                                                <h3 style="color:#16893c;">Required Information</h3>
+                                                <label for="contact_name" id="namelbl">Contact Name</label>
+                                                 <input type="text" id="contact_name" name="contact_name" placeholder=""><br>
+
+                                                <label for="email" id="emaillbl">Email</label>
+                                                 <input type="text" id="email" name="email" placeholder=""><br>
+                                                 <label for="state" id="statelbl">State/Province</label>
+                                              <select id="state" name="country">
+                                              <option>Choose a country</option>
+                                              <option>France</option>
+                                               <option>Italy</option>
+                                               <option>Portugal</option>
+                                               </select><br>
+                                               <label for="postal" id="postallbl">Postal Code</label>
+                                              <input type="number" id="postal" name="postal"><br>            
+                                               <label for="business" id="businesslbl" >Business Type</label>
+                                                <select id="business" name="businesstype">
+                                               <option>Select a business type</option>
+                                               <option>France</option>
+                                               <option>Italy</option>
+                                               <option>Portugal</option>
+                                               </select>
+                                             </div>
+
+
+
+
+
+
+
+                                       <div class="cbp-mc-columnreg" id="top-right">
+                                             <h3 style="color:#16893c"><sup>*</sup>Your Contact Information</h3>
+                                             <label for="business" id="bisnamelbl">Business Name</label>
+                                             <input type="text" id="business" name="business" ><br>
+
+                                            <label for="phone" id="phonelbl">Phone</label>
+                                             <input type="tel" id="phone" name="phone" ><br>
+
+                                             <label for="address" id="addresslbl">Address</label>
+                                             <input type="text" id="needby" name="needby" ><br>
+
+                                            <label for="city" id="citylbl">City</label>
+                                            <input type="text" id="city" name="city" ><br>
+
+                                            <label for="claim" id="claimlbl">Claim</label>
+                                             <input type="text" id="claim" name="claim" ><br>
+
+                                         </div>
+
+
+                                   <div class="cbp-mc-columnreg" id="bottom-left">
+
+                                     <h3 style="color:#16893c">Additional Information</h3>
+
+                                    <label for="shipping" id="shippinglbl">Shipping Method</label>
+                                     <input type="text" id="" name=""> <br>
+
+                                    <label for="additional" id="additionallbl">Additonal Part</label>
+                                    <input type="text" id="additional" name="additional" ><br>
+
+                                   <label for="needby" id="needbylbl">Need By</label>
+                                  <input type="text" id="needby" name="needby" ><br>
+
+                                   <label for="desired" id="desiredlbl">Desired Part(Color) </label>
+                                    <input type="text" id="desired" name="desired" >
+
+                                </div>
+
+
+
+            <div class="cbp-mc-columnreg" id="bottom-right">
+            <label for="notes" id="noteslbl">Additional Notes</label>
+           <textarea id="notes" name="notes" style="height:140px;"></textarea><br> 
+             <div class="cbp-mc-submit-wrapreg"><input class="cbp-mc-submitreg" type="submit" value="Submit Form" data-toggle="modal" 
+                                                       data-target="#myModalreg"  onclick="showmodal();"/></div>
+            </div>      
+
+
+    </form>
+
+
+          <!-- ============================================= End of reg form  ================================================================= -->
+
+
+
+
+                                    
+
+
+
+
+                                     </div>
+                                  <div id="circleleft" onclick="expand();">
+                        <img src="img/Red%20Piston.png" width="100%" height="100%" />
+                        <h3> SEARCH PARTS</h3>              
+         
+         </div>
+
+
+
+                              <div id="sellpane" onclick="expandsell();">
+
+                                  <form class="cbp-mc-formsell" id="cbp-mc-formsell">
+                                               <div class="cbp-mc-columnsell">
+                                                   <h1> GET BEST DEAL HERE</h1>
+
+
+                                            <label for="name" id="lblname">Name<sup>*</sup></label>
+                                            <input type="text" id="name" name="name"></br>
+
+                                              <label for="phone" id="lblphone">Phone<sup>*</sup></label>
+                                             <input type="tel" id="phone" name="phone"></br>
+
+                                              <label for="email" id="lblemail">E-mail<sup>*</sup></label>
+                                             <input type="email" id="email" name="email"></br>
+
+                                            <label for="zip" id="lblzip">Zip<sup>*</sup></label>
+                                            <input type="number" id="zip" name="zip"></br>
+
+                                              <label for="caryear" id="lblcaryear">Car Year<sup>*</sup></label>
+                                             <input type="date" id="caryear" name="caryear"></br>
+
+                                              <label for="carmake" id="lblcarmake">Car Make<sup>*</sup></label>
+                                             <input type="text" id="carmake" name="carmake"></br>
+
+                                              <label for="carmodel" id="lblcarmodel">Car Model<sup>*</sup></label>
+                                             <input type="text" id="carmodel" name="carmodel"></br>
+
+                                              <label for="carcondition" id="lblcarcondition">Car Condition<sup>*</sup></label>
+                                              <input type="checkbox" id="carcondition1" name="carcondition" value="Drivable">Drivable
+                                              <input type="checkbox" id="carcondition2" name="carcondition" value="Undrivable">Undrivable</br>
+
+                                           <label for="carphotos" id="lblcarphotos">Photos</label>
+                                           <input type="text" id="carphotos" name="carmodel"></br>
+
+                                           <label for="deal" id="lbldeal">Expected Deal</label>
+                                           <input type="text" id="deal" name="deal"></br>
+
+                                           <input type="submit" id="submitbtn" name="submit" value="SUBMIT" data-toggle="modal" data-target="#myModalsell" >  
+
+
+                                        </div>
+
+                                    </form>
+
+
+                                   <div id="circleright" onclick="expandsell();">Sell</div>  
+                              </div> 
+
+                            </div>
+                         </div>
+                  </section> 
+        <!-- /container -->                
+
+
+
+
+        <section  id="section-2" style="width:100%; height:768px; overflow:hidden;">
+
+                    <div class="container"  style="overflow:hidden;">
+
+                          <div id="sect2splits">
+
+                                <div id="sect2searchpane">
+                                   <div id="sect2circleleft" onclick="sect2expand();">Search</div>
+                              <form class="cbp-mc-form2" id="cbp-mc-form2">
+                                               <div class="cbp-mc-column2">
+                                                   <h1> SEARCH PART</h1>
+                                                   <h6 id="vim">VIM LOOKUP<h6>
+                                             <label for="year" id="lblyear">Year</label>
+                                             <input type="date" id="year" name="year"></br>
+                                             <label for="model" id="lblmodel">Model</label>
+                                             <select id="model" name="model">
+                                                   <option>BWF54</option>
+                                                   <option>AUPR7</option>
+                                                   <option>MAR7T</option>
+                                                   <option>HON5A</option>
+                                          </select></br>
+
+                                            <label for="area" id="lblarea">Area</label>
+                                             <select id="area" name="area">
+                                                   <option>New Delhi</option>
+                                                   <option>London</option>
+                                                   <option>New York</option>
+                                                   <option>Paris</option>
+                                          </select>   </br>
+
+
+                                                  <label for="sort" id="lblsort">Sort By</label>
+                                          <select id="sort" name="sort">
+                                                   <option>Model Number</option>
+                                                   <option>Area</option>
+                                                   <option>Year</option>
+
+                                          </select></br>
+
+                                           <label for="postalcode" id="lblpostal">Postal Code</label>        
+                                             <input type="text" id="postalcode" name="postalcode">
+
+                                             <label for="search" id="lblsearch"></label>  
+                                            <input type="submit" id="search" name="search" value="Search"> 
+
+
+                                        </div>
+
+                                    </form>
+                              </div>
+
+
+                            <div class="aboutbody" id="aboutbody" >
+                            <div class="container" id="aboutcontainer">
+                            <p> "In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the graphic elements of a document or visual presentation. By replacing the distraction of meaningful content with filler text of scrambled Latin it allows viewers to focus on graphical elements such as font, typography, and layout.</br>
+
+    The lorem ipsum text is typically a mangled section of De finibus bonorum et malorum, a 1st-century BC Latin text by Cicero, with words altered, added, and removed that make it nonsensical, improper Latin.</br>
+
+    A variation of the common lorem ipsum text has been used during typesetting since the 1960s or earlier, when it was popularized by advertisements for Letraset transfer sheets. It was introduced to the Digital Age by Aldus Corporation in the mid-1980s, which employed it in graphics and word processing templates for its breakthrough desktop publishing program"</p>
+                              </div>
+                              </div>
+
+                              <div id="sect2sellpane">
+                                   <div id="sect2circleright" onclick="sect2expandsell();">Sell</div>  
+                              </div> 
+
+                           </div>
+                    </div>
+
+
+                        <!-- /container -->   
+
+        </section> 
+
+
+
+            <section id="section-3">
+
+                 <p> the How it works  peice</p>				
+            </section>
+
+            <section id="section-4">
+                  <p>the why recycle peice</p>				
+
+            </section>
+
+            <section id="section-5" >
+
+                  <p>the FAQ </p>	
+
+            </section>
+
+            <section id="section-6">
+            <p>the Contact peice</p>
+            </section>
+
+
+
+            </div><!-- the #section-7 --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- ================================================================================================================================== -->                      
+
+
+
+
+
+
+
+
+
+             
+                </div>  <!-- /content -->
+
+
+            <script src="js/cbpFWTabs.js"></script>
+            <script>
+                new CBPFWTabs( document.getElementById( 'tabs' ) );
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Full width tabs end -->
+
+          <!-- /container -->    
+
+
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+           <!--  <script type="text/javascript">        
+                   var winWidth = $(window).width();
+                   var winHeight = $(window).height();
+
+                   // set initial div height / width
+                   $('.container').css({
+                        'width': winWidth,
+                        'height': winHeight,
+                         });
+
+                    // make sure div stays full width/height on resize
+                    $(window).resize(function(){
+                     $('.container').css({
+                             'width': winWidth,
+                             'height': winHeight,
+                      });
+                     });
+    </script> -->
+
+
+            <script src="js/vendor/bootstrap.min.js"></script>
+            <script src="js/classie.js"></script>
+            <script src="js/cbpSplitLayout.js"></script>
+            <script src="js/plugins.js"></script>
+            <script src="js/main.js"></script>
+            <script src="js/cbpFWTabs.js"></script>
+            <script src="js/modal.js"></script>
+            <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+            <script>
+                (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+                function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+                e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+                e.src='//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+                ga('create','UA-XXXXX-X');ga('send','pageview');
+            </script>
+        </body>
+    </html>
