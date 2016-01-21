@@ -1,4 +1,4 @@
-EAR
+#EAR
 ===
 
-A project i am experimenting with sections as navigation
+*A project i am experimenting with sections as navigation*
